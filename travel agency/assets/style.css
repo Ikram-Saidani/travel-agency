@@ -1,0 +1,471 @@
+*{
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: "Open Sans", sans-serif;
+}
+body{
+    font-size: 14px;
+    font-weight: 400;
+}
+.stars{
+    color: #cdcd19;
+}
+ul{
+    list-style: none;
+}
+/********************HEADER*************************/
+.navbar{
+    align-items: center;
+    padding: 20px !important;
+    background-color: #392c51b4;
+}
+.navbar>div .left a{
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-expand-lg .navbar-collapse{
+    flex-grow: revert;
+    gap: 50px;
+}
+.navbar h2{
+    font-size: 30px;    
+    font-family: "Reddit Mono", monospace;
+    text-transform: capitalize;
+    font-weight: 900 ;
+    font-style: italic;
+    text-shadow:  2px 2px 5px rgba(0, 0, 0, 0.282);
+    color: #fa9e1b;
+    text-align: end;
+}
+.navbar h2 .p2{
+    color: #8d4fff;
+}
+.navbar h2 .p3{
+    color: #fa9e1b;
+}
+.navbar img{
+    margin-bottom: 20px;
+}
+.navbar ul{
+    gap: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    align-items: flex-start;
+}
+.navbar ul li{
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    min-width: fit-content;
+    max-width: fit-content;
+}
+.navbar ul li:hover{
+    border-bottom: 2px solid #8d4fff;
+}
+.form{
+    position: relative;
+    min-width: fit-content;
+    max-width: fit-content;
+}
+.navbar form .search{
+    color: #8d4fff;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15%;
+    border-radius: 3px;
+}
+.navbar form .form-control{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.231);
+    padding-left: 10px !important;
+}
+/*****************HOME********************/
+#home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #392c518b;   
+}
+#home{
+    height: 100vh;
+    max-height: fit-content;
+    position: relative;
+    background-image: url(home_slider.jpg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    display: block;
+}
+.carousel{
+    position: relative;
+}
+#home h1{
+    text-transform: uppercase;
+    font-family: "Delicious Handrawn", cursive;
+    font-weight: 400;
+    font-size: 120px;
+    color: white;
+    z-index: 5;
+    text-align: center;
+    margin: 0 auto !important;
+    max-width: 800px;
+}
+#home .explore{
+    z-index: 5;
+    width: 170px;
+    height: 60px;
+    border-radius: 60px;
+    border: none;
+    background-image: linear-gradient(to top left,#fa9e1b,#8d4fff);
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-top: 50px !important;
+}
+#home .explore:hover{
+    background-image: linear-gradient(to top left,#8d4fff,#fa9e1b);
+}
+/*******************destination**********************/
+#destination{
+    min-height: fit-content;
+}
+/*********************tours************************/
+.tours{
+    margin: 60px 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: min-content;
+    text-align: center;
+}
+.tours h2, .rooms h2{
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+.tours>p, .accordion-body{
+    line-height: 2;
+    font-weight: 500;
+    color: #a5a5a5;
+    font-size: 19px;
+    font-style: italic;
+    padding: 0 30px !important;
+}
+.tours-details>div .image{
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto !important;
+}
+.tours-details>div .image img{
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.389);
+    height: 400px;
+    max-width: 300px;
+}
+.tours-details>div .image .description{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px 0;
+    width: 95%;
+    height: 95%;
+    top: 10px;
+    left: 7px;
+    background-image: linear-gradient(to left, #8d4fff6c,#fa9d1b61);
+    visibility: hidden;
+    transform: 0.3s;
+    opacity: 0;
+    color: white;
+}
+.tours-details>div .image:hover .description{
+    visibility: visible;
+    transition: 0.3s;
+    opacity: 1;
+}
+.tours-details>div .image .description h3{
+    text-transform: uppercase;
+    font-size: 40px;
+}
+.accordion-flush>.accordion-item>.accordion-header{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 !important;
+}
+.accordion-flush>.accordion-item>.accordion-header .accordion-button, .accordion-flush>.accordion-item>.accordion-header .accordion-button.collapsed{
+    width: 170px;
+    height: 60px;
+    border-radius: 60px !important;
+    border: none;
+    background-image: linear-gradient(to top left,#fa9e1b,#8d4fff);
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 0 20px !important;
+}
+.accordion-flush>.accordion-item>.accordion-header .accordion-button, .accordion-flush>.accordion-item>.accordion-header .accordion-button.collapsed:hover{
+    background-image: linear-gradient(to top left,#8d4fff,#fa9e1b);
+}
+.accordion-body{
+    margin: 10px !important;
+}
+/**************rooms**********************/
+.rooms h2{
+    text-align: center;
+    padding-bottom: 60px !important;
+}
+.rooms .room-info{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    width: fit-content;
+    align-items: center;
+    gap: 10px;
+    margin: 10px !important;
+}
+.room-left{
+    position: relative;
+}
+.room-left img{
+    width: 200px;
+    height: 300px;
+}
+.room-left h4{
+    position: absolute;
+    bottom: 30px;
+    width: fit-content;
+    padding: 10px !important;
+    text-align: center;
+    background-color: #fa9e1b;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.room-right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.room-right span{
+    color: #cdcd19;
+    font-size: 30px;
+    font-weight: bold;
+}
+.room-right ul{
+    display: flex;
+    gap: 10px;
+}
+.card-text, .card-title{
+    font-weight: 500;
+    color: #a5a5a5;
+    font-size: 15px;
+    font-style: italic;
+}
+.room-right button{
+    width: 140px;
+    height: 40px;
+    border-radius: 40px !important;
+    border: none;
+    background-image: linear-gradient(to top left,#fa9e1b,#8d4fff);
+    color: white !important;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 0 20px !important;
+    margin-bottom: 20px !important;
+}
+.room-right button:hover{
+    background-image: linear-gradient(to top left,#8d4fff,#fa9e1b);
+}
+/****************************contact***************************/
+#contact h2{
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 60px 0 !important;
+}
+#contact form{
+    width: 80%;
+    margin: 0 auto 20px !important;
+    padding: 10px !important;
+    background-color: #8d4fff46;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.486);
+    border-radius: 5px;
+    display: grid;
+    gap: 20px;
+}
+#contact form .row .col{
+    margin-right: 10px !important;
+}
+#contact form>div label, #contact form>div select,#contact form>div textarea,#contact form>div input{
+    font-weight: 500;
+    font-size: 19px;
+    font-style: italic;
+    text-transform: capitalize;
+    color: #a5a5a5;
+}
+#contact form .input{
+    border: none;
+    border-bottom: 2px solid #fa9e1b;
+}
+#contact form>div select,#contact form>div textarea,#contact form>div input{
+    padding: 10px !important;
+    color: #a5a5a5;
+    background-color: transparent;
+    border: none;
+}
+#contact form>div select{
+    width: 100%;
+}
+#contact form>div select option{
+    background-color: #8d4fff46;
+    font-size: 19px;
+}
+.button{
+    text-align: center;
+}
+#contact form>div button{
+    width: 170px;
+    height: 40px;
+    border-radius: 40px !important;
+    border: none;
+    background-image: linear-gradient(to top left,#fa9e1b,#8d4fff);
+    color: white !important;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 0 20px !important;
+}
+#contact form>div button:hover{
+    background-image: linear-gradient(to top left,#8d4fff,#fa9e1b);
+}
+/***************************footer****************************/
+footer{
+    position: relative;
+    background-color: #392c51b4;
+    height: 150px;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+footer .logo a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+footer .logo h2{
+    font-size: 17px;    
+    font-family: "Reddit Mono", monospace;
+    text-transform: capitalize;
+    font-weight: 900 ;
+    font-style: italic;
+    text-shadow:  2px 2px 5px rgba(0, 0, 0, 0.282);
+    color: #fa9e1b;
+}
+footer .logo h2 .p2{
+    color: #8d4fff;
+}
+footer .logo h2 .p3{
+    color: #fa9e1b;
+}
+footer .logo img{
+    margin-bottom: 10px !important;
+    width: 17px;
+}
+footer ul{
+    display: flex;
+    gap: 50px;
+    font-size: 19px;
+    justify-content: center;
+    align-items: center;
+}
+footer li a{
+    color: white;
+    padding: 5px 10px !important;
+    border: 2px solid #fa9e1b;
+    border-radius: 50%;
+}
+footer li a:hover{
+    color: #fa9e1b;
+    background-color: white;
+    border: 2px solid white;
+}
+footer p{
+    position: absolute;
+    bottom: 10px;
+    left: auto;
+    font-size: 15px;
+    font-weight: 200;
+    color: #a5a5a5;
+}
+/**********************return***************************/
+.return{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+.return a{
+    color: white;
+    padding: 5px 10px !important;
+    border: 2px solid #fa9e1b;
+    border-radius: 50%;
+    background-color: #fa9e1b;
+}
+.return a:hover{
+    color: #fa9e1b;
+    background-color: #8d4fff;
+    border: none;
+}
+/***********************@media*******************************/
+@media ((max-width:930px) and (min-width:768px)){
+    .tours-details{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .tours-details>div .image img{
+        height: 300px;
+        width: 250px;
+    }
+    .tours-details>div .image .description{
+        max-width: 80%;
+        top: 10px;
+        left: 30px !important;
+    }
+}
+@media (min-width:930px){
+    .tours-details{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (min-width:768px){
+    .rooms{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .rooms h2{
+        grid-column: 1/-1;
+    }
+}
